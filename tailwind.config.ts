@@ -14,8 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        one: "#9b4dca", // Purple
-        two: "#f78da7", // Pink
+        one: "#eadcf7", // Purple
+        two: "#fccfea", // Pink
         three: "#ffffff", // White
       },
       fontFamily: {

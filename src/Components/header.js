@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import menuIcon from "../../public/menu.png";
+import menuIcon from "../../public/new-menu.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,17 +12,17 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-5 py-3 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/">
-            <span className="text-xl lg:text-2xl font-light text-gray-900 hover:text-one cursor-pointer">
+            <span className="text-xl lg:text-2xl font-light text-gray-900 hover:text-purple-500 cursor-pointer ">
               Winning the Cancer Journey
             </span>
           </Link>
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden bg-white p-2 rounded-md text-gray-400 hover:text-gray-500 focus:outline-none"
+            className="md:hidden rounded "
           >
             <span className="sr-only">Menu</span>
-            <Image src={menuIcon} alt="Menu" width={24} height={24} />
+            <Image src={menuIcon} alt="Menu" width={40} height={40} />
           </button>
 
           <div
@@ -30,7 +30,7 @@ export default function Header() {
               isMenuOpen ? "flex" : "hidden md:flex"
             } items-center md:relative ${
               isMenuOpen
-                ? "absolute top-full right-0 mt-2 bg-white shadow-md flex-col z-50 p-4"
+                ? "absolute  top-full right-0 mt-2 bg-white shadow-md flex-col z-50 p-4"
                 : "shadow-none"
             }`}
             style={{
@@ -46,26 +46,34 @@ export default function Header() {
               }`}
             >
               <Link href="/" passHref>
-                <span className="py-2 md:py-0 cursor-pointer hover:text-one ">Home</span>
+                <span className="py-2 md:py-0 cursor-pointer  hover:text-pink-500 ">
+                  Home
+                </span>
               </Link>
               <Link href="/about" passHref>
-                <span className="py-2 md:py-0 cursor-pointer hover:text-one ">About</span>
+                <span className="py-2 md:py-0 cursor-pointer hover:text-pink-500 ">
+                  About
+                </span>
               </Link>
               <Link href="/blog" passHref>
-                <span className="py-2 md:py-0 cursor-pointer hover:text-one ">Blog</span>
+                <span className="py-2 md:py-0 cursor-pointer  hover:text-pink-500 ">
+                  Blog
+                </span>
               </Link>
               <Link href="/store" passHref>
-                <span className="py-2 md:py-0 cursor-pointer hover:text-one ">Store</span>
+                <span className="py-2 md:py-0 cursor-pointer  hover:text-pink-500 ">
+                  Store
+                </span>
               </Link>
               <Link href="/contact" passHref>
-                <span className="py-2 md:py-0 cursor-pointer hover:text-one ">
+                <span className="py-2 md:py-0 cursor-pointer  hover:text-pink-500">
                   Contact
                 </span>
               </Link>
               {/* Increase the margin before "Request Appointment" for larger separation */}
               <div className="md:ml-12 lg:ml-16">
                 <Link href="/appointment" passHref>
-                  <span className="py-2 md:py-0 cursor-pointer hover:text-one ">
+                  <span className="py-2 md:py-0 cursor-pointer hover:text-pink-500 ">
                     Request Appointment
                   </span>
                 </Link>

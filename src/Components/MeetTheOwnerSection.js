@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function MeetTheOwnerSection() {
   return (
     <section className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-5 py-3 lg:px-8 mb-8 flex flex-wrap md:flex-nowrap">
+      <div className="max-w-7xl mx-auto px-5 py-3 lg:px-8 mt-24 mb-24 flex flex-wrap md:flex-nowrap">
         <div className="md:flex-grow md:pr-8">
           <h2 className="text-3xl  text-gray-800 mb-4">
             Meet Dr. Tiffany Troso-Sandoval
@@ -32,9 +32,9 @@ export default function MeetTheOwnerSection() {
         <div className="md:w-1/2 md:flex md:justify-end lg:w-1/3 mt-8 md:mt-0 mr-10">
           {/* Placeholder for Dr. Troso-Sandovals image */}
           <Image
-            src="/tiff.jpg" // The path to your image
+            src="/tiff2.png" // The path to your image
             alt="Dr. Tiffany Troso-Sandoval"
-            className="rounded-2xl shadow-2xl object-cover object-center"
+            className="object-cover object-center"
             width={500} // Specify the width
             height={500} // Specify the height, adjust as necessary
           />

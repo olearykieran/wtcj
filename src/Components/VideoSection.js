@@ -14,7 +14,7 @@ export default function VideoSection() {
             Empowering patients and caregivers with understanding <br />
             in their journey through breast and gynecological cancers.
           </p>
-          <button className="mt-8 bg-pink-500 text-white py-2 px-4 rounded shadow-lg">
+          <button className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-lg">
             Request appointment
           </button>
         </div>
