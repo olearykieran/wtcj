@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fam from "../../public/images/fam.jpg";
+import fam from "../../public/fam.jpg";
 
 export default function HowWeCanHelpSection() {
   return (

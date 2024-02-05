@@ -1,3 +1,5 @@
+// src/app/page.tsx
+
 import Header from "../Components/Header";
 import VideoSection from "../Components/VideoSection";
 import MeetTheOwnerSection from "../Components/MeetTheOwnerSection";
@@ -9,7 +11,6 @@ import Events from "../Components/Events";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import PopupBar from "../Components/PopupBar";
-import "./globals.css";
 
 function MyApp({}) {
   return (
