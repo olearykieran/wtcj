@@ -32,7 +32,7 @@ export default function MeetTheOwnerSection() {
         <div className="md:w-1/2 md:flex md:justify-end lg:w-1/3 mt-8 md:mt-0 mr-10">
           {/* Placeholder for Dr. Troso-Sandovals image */}
           <Image
-            src="/tiff2.png" // The path to your image
+            src="/images/tiff2.png" // The path to your image
             alt="Dr. Tiffany Troso-Sandoval"
             className="object-cover object-center"
             width={500} // Specify the width
