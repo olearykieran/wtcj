@@ -24,9 +24,9 @@ export default function HowWeCanHelpSection() {
             <p className="mt-4">
               At Winning the Cancer Journey, we provide support and resources tailored to
               the needs of cancer patients and their caregivers. From navigating treatment
-              options to understanding emotional support resources, we're here to guide
-              you every step of the way. Our goal is to empower you with knowledge and
-              care, ensuring you never feel alone in your journey.
+              options to understanding emotional support resources, we&aposre here to
+              guide you every step of the way. Our goal is to empower you with knowledge
+              and care, ensuring you never feel alone in your journey.
             </p>
           </div>
         </div>

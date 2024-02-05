@@ -23,7 +23,7 @@ export default function PopupBar() {
     <>
       {showPopup && (
         <div className="bg-pink-500 text-white text-center p-4">
-          FREE Guide: "8 Questions to ask your doctor as a new ONCOLOGY PATIENT"
+          FREE Guide: &quot;8 Questions to ask your doctor as a new ONCOLOGY PATIENT&quot;
           <button
             className="ml-4 bg-white text-blue-500 px-4 py-2 rounded"
             onClick={handleOpenForm}
