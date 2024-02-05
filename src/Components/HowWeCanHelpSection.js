@@ -1,4 +1,5 @@
 import Image from "next/image";
+import fam from "../../public/images/fam.jpg";
 
 export default function HowWeCanHelpSection() {
   return (
@@ -11,7 +12,7 @@ export default function HowWeCanHelpSection() {
           {/* Image */}
           <div className="w-full lg:w-1/2  mt-10 lg:mt-0 flex mb-8 lg:mb-0">
             <Image
-              src="/images/fam.jpg"
+              src={fam}
               alt="Happy Family"
               width={500}
               height={300}
