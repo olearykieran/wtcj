@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section className="py-12 bg-gray-200" id="contact">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center mb-8">Stay Connected</h2>
+        <h2 className="text-3xl font-semibold text-center mb-8">Connect With Us</h2>
 
         <div className="md:flex justify-between items-start gap-10">
           {/* Contact Information */}
