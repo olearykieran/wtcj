@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function VideoSection() {
   const handleScrollToContact = () => {
@@ -10,6 +11,7 @@ export default function VideoSection() {
     }
   };
 
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <div
       className="relative w-full"
@@ -20,24 +22,51 @@ export default function VideoSection() {
         src="/sunset5.jpeg"
         alt="Hero Image"
       />
-      <div className="absolute inset-0">
-        <div className="flex justify-center items-center w-full max-w-7xl mx-auto h-full">
-          {/* Logo on the left */}
-          <div className="flex-shrink-0">
-            <img src="/wpng.png" alt="Logo" style={{ width: "450px", height: "300px" }} />
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        {/* Logo and text content: responsive layout */}
+        <div
+          className={
+            isMobile
+              ? "flex flex-col w-full items-center"
+              : "flex justify-center items-center w-full max-w-7xl mx-auto h-full"
+          }
+        >
+          <div className={isMobile ? "flex-shrink-0" : "flex-shrink-0 mr-20"}>
+            <img
+              src="/wpng.png"
+              alt="Logo"
+              style={{
+                width: isMobile ? "250px" : "450px",
+                height: isMobile ? "150px" : "300px",
+              }}
+            />
           </div>
-          {/* Text content on the right */}
-          <div className="text-white text-center" style={{ marginLeft: "250px" }}>
-            <p className="text-3xl py-2 font-light">Leading with Expertise</p>
-            <p className="text-3xl py-2 font-light">Empowering with Knowledge</p>
-            <p className="text-3xl py-2 font-light">Guiding with Compassion</p>
-            <button
-              onClick={handleScrollToContact}
-              className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-6xl"
-            >
-              Schedule a Discovery Call
-            </button>
-          </div>
+          {isMobile && (
+            <div className="text-white text-center mt-4">
+              <p className="text-2xl py-2 font-light">Leading with Expertise</p>
+              <p className="text-2xl py-2 font-light">Empowering with Knowledge</p>
+              <p className="text-2xl py-2 font-light">Guiding with Compassion</p>
+              <button
+                onClick={handleScrollToContact}
+                className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-6xl"
+              >
+                Schedule a Discovery Call
+              </button>
+            </div>
+          )}
+          {!isMobile && (
+            <div className="text-white text-center ml-4">
+              <p className="text-3xl py-2 font-light">Leading with Expertise</p>
+              <p className="text-3xl py-2 font-light">Empowering with Knowledge</p>
+              <p className="text-3xl py-2 font-light">Guiding with Compassion</p>
+              <button
+                onClick={handleScrollToContact}
+                className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-6xl"
+              >
+                Schedule a Discovery Call
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

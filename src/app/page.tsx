@@ -15,14 +15,18 @@ function MyApp({}) {
   return (
     <>
       <Header />
-      <VideoSection />
-      <MeetTheOwnerSection />
-      <HowWeCanHelpSection />
-      <FeaturedSection />
-      <PatientStories />
-      <Resources />
-      <Events />
-      <Contact />
+      <div className="pt-20">
+        {" "}
+        {/* Adjust this value based on your header's actual height */}
+        <VideoSection />
+        <MeetTheOwnerSection />
+        <HowWeCanHelpSection />
+        <FeaturedSection />
+        <PatientStories />
+        <Resources />
+        <Events />
+        <Contact />
+      </div>
       <Footer />
     </>
   );
