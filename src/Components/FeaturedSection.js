@@ -5,32 +5,34 @@ export default function FeaturedArticles() {
     {
       id: 1,
       title: "Navigating Your Treatment Options",
-      summary:
-        "Explore the various treatment pathways available and how to choose the best one for you.",
+      summary: "Coming Soon...",
       imageUrl: "/doctor.jpeg",
       link: "/blog/treatment-options",
     },
     {
       id: 2,
       title: "Understanding Emotional Support Resources",
-      summary:
-        "Learn about the emotional support resources available for cancer patients and their families.",
+      summary: "Coming Soon...",
       imageUrl: "/emo.jpeg",
       link: "/blog/emotional-support",
     },
     {
       id: 3,
       title: "Empowerment Through Knowledge",
-      summary:
-        "Discover how gaining knowledge about your condition can empower you during your journey.",
+      summary: "Coming Soon...",
       imageUrl: "/team.jpeg",
       link: "/blog/empowerment-knowledge",
     },
   ];
 
   return (
-    <section className="py-12 bg-white mt-24 mb-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="py-12 bg-white mt-24 "
+      style={{
+        borderBottom: "3px solid rgb(225, 0, 172, 0.08)",
+      }}
+    >
+      <div className="max-w-6xl mb-24 mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-light text-center">Featured Articles</h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article) => (

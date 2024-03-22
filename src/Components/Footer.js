@@ -1,19 +1,42 @@
+"use client";
+
+import React from "react";
+
 export default function Footer() {
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-gray-800 text-white">
-      <div className="max-w-6xl mx-auto lg:px-4 py-6 lg:px-8">
+      <div className="max-w-6xl mx-auto  py-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between">
           <div className="flex gap-4 justify-center px-16">
-            <a href="/about" className="hover:underline">
+            <a href="/" onClick={() => handleScroll("home")} className="hover:underline">
+              Home
+            </a>
+            <a
+              href="#meettheowner"
+              onClick={() => handleScroll("meettheowner")}
+              className="hover:underline"
+            >
               About Us
             </a>
-            <a href="/services" className="hover:underline">
+            {/* <a href="/services" className="hover:underline">
               Services
-            </a>
-            <a href="/blog" className="hover:underline">
+            </a>{" "}
+            */}
+            {/* <a href="/blog" className="hover:underline">
               Blog
-            </a>
-            <a href="/contact" className="hover:underline">
+            </a> */}
+            <a
+              href="#contact"
+              onClick={() => handleScroll("contact")}
+              className="hover:underline"
+            >
               Contact
             </a>
           </div>
@@ -23,7 +46,7 @@ export default function Footer() {
             <br className="lg:hidden" /> {/* Break line on small screens only */}
             Website by{" "}
             <a
-              href="https://holygrailstudio.com"
+              href="https://theholygrailstudio.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"

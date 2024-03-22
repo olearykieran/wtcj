@@ -1,8 +1,20 @@
 "use client";
 
+import React from "react";
+
 export default function VideoSection() {
+  const handleScrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="relative w-full" style={{ height: "60vh" }}>
+    <div
+      className="relative w-full"
+      style={{ height: "60vh", borderBottom: "3px solid rgb(0, 242, 223, .08)" }}
+    >
       <img
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/sunset5.jpeg"
@@ -19,8 +31,11 @@ export default function VideoSection() {
             <p className="text-3xl py-2 font-light">Leading with Expertise</p>
             <p className="text-3xl py-2 font-light">Empowering with Knowledge</p>
             <p className="text-3xl py-2 font-light">Guiding with Compassion</p>
-            <button className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-lg">
-              Schedule a discovery call
+            <button
+              onClick={handleScrollToContact}
+              className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-6xl"
+            >
+              Schedule a Discovery Call
             </button>
           </div>
         </div>

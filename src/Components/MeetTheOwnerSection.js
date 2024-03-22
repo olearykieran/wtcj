@@ -5,7 +5,13 @@ import tiff from "../../public/t1.jpeg";
 
 export default function MeetTheOwnerSection() {
   return (
-    <section className="py-12 bg-white">
+    <section
+      id="meettheowner"
+      className="py-12"
+      style={{
+        borderBottom: "3px solid rgb(225, 0, 172, 0.08)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-5 py-3 lg:px-8 mt-24 mb-24 flex flex-wrap md:flex-nowrap">
         <div className="md:flex-grow md:pr-8">
           <h2 className="text-3xl  text-gray-800 mb-4">
@@ -31,14 +37,15 @@ export default function MeetTheOwnerSection() {
           </p>
         </div>
         <div className="md:w-1/2 md:flex md:justify-end lg:w-1/3 mt-8 md:mt-0 mr-10">
-          {/* Placeholder for Dr. Troso-Sandovals image */}
-          <Image
-            src={tiff} // The path to your image
-            alt="Dr. Tiffany Troso-Sandoval"
-            className="object-cover object-center"
-            width={500} // Specify the width
-            height={500} // Specify the height, adjust as necessary
-          />
+          <div className="shadow-lg rounded-lg overflow-hidden">
+            <Image
+              src={tiff} // The path to your image
+              alt="Dr. Tiffany Troso-Sandoval"
+              width={500} // Specify the width
+              height={500} // Specify the height, adjust as necessary
+              className="object-cover object-center transform hover:scale-105 transition duration-500 ease-in-out"
+            />
+          </div>
         </div>
       </div>
     </section>

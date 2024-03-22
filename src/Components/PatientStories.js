@@ -3,29 +3,35 @@ export default function PatientStories() {
   const stories = [
     {
       id: 1,
-      name: "Jordan Doe",
+      name: "Sloan K Review",
       diagnosis: "Breast Cancer",
       story:
-        "My journey with breast cancer was challenging, but with the right support and care, I've been able to reclaim my health and joy. The guidance I received made all the difference in my treatment and recovery process.",
+        "Dr Troso is a kind warm and experienced doctor. She treated me with stage 3 breast cancer . I owe her my life. I am a cancer survivor of 6 wonderful years I highly recommend. Dr Troso",
     },
     {
       id: 2,
-      name: "Alex Smith",
-      diagnosis: "Ovarian Cancer",
+      name: "Frazer B",
       story:
-        "Facing ovarian cancer was the toughest phase of my life. The support system and the resources provided by Winning the Cancer Journey helped me navigate through the toughest times with hope and courage.",
+        "II will forever be grateful to Dr. Troso-Sandoval, she was the first person my wife and I met with after she was diagnosed. She genuinely cares for my wife and all of her patients. She is accessible to answer any questions or concerns we  have.",
     },
     {
       id: 3,
-      name: "Casey Johnson",
-      diagnosis: "Cervical Cancer",
+      name: "MaryAnn D",
+
       story:
-        "Dealing with cervical cancer brought a lot of fear and uncertainty. The educational resources and emotional support I found here were invaluable in my fight against cancer.",
+        "Dr Tiffany Troso from MSK is my oncologist. She is an excellent doctor and person. Her professionalism shines. I highly recommend her. She is always looking for ways to improve my quality of life. Thank you Dr Troso and your Staff.",
     },
   ];
 
   return (
-    <section className="py-12 bg-one">
+    <section
+      style={{
+        background:
+          "linear-gradient(to right, rgba(225, 0, 172, 0.1), rgba(0, 242, 224, 0.1))",
+        borderBottom: "3px solid rgb(0, 242, 223, .08)",
+      }}
+      className="py-12 bg-one"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-light text-center mb-12">Patient Stories</h2>
         <div className="flex justify-center items-center flex-wrap gap-10">

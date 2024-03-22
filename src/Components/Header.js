@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import menuIcon from "../../public/new-menu.png";
@@ -7,9 +7,28 @@ import menuIcon from "../../public/new-menu.png";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY < window.innerHeight * 0.6; // Adjust as needed based on your video section's height
+      setOpacity(show ? 1 : 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white shadow relative">
-      <div className="max-w-7xl mx-auto px-5 py-3 lg:px-8">
+    <header
+      className="top-0 w-full z-30 px-5 py-3 lg:px-8"
+      style={{
+        backgroundColor: `rgba(255, 255, 255, ${opacity * 0.8})`,
+        borderBottom: "3px solid rgb(225, 0, 172, 0.08)",
+        transition: "opacity 0.5s ease-in-out",
+      }}
+    >
+      <div className=" mx-auto px-5 py-3 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/">
             <span className="text-xl lg:text-2xl font-light text-gray-900 hover:text-purple-500 cursor-pointer ">
@@ -50,34 +69,35 @@ export default function Header() {
                   Home
                 </span>
               </Link>
-              <Link href="/about" passHref>
+              <Link href="#meettheowner" passHref>
                 <span className="py-2 md:py-0 cursor-pointer hover:text-pink-500 ">
                   About
                 </span>
               </Link>
-              <Link href="/blog" passHref>
+              {/* <Link href="/blog" passHref>
                 <span className="py-2 md:py-0 cursor-pointer  hover:text-pink-500 ">
                   Blog
                 </span>
-              </Link>
-              <Link href="/store" passHref>
+              </Link> */}
+              {/* <Link href="/store" passHref>
                 <span className="py-2 md:py-0 cursor-pointer  hover:text-pink-500 ">
                   Store
                 </span>
               </Link>
-              <Link href="/contact" passHref>
+              */}
+              <Link href="#contact" passHref>
                 <span className="py-2 md:py-0 cursor-pointer  hover:text-pink-500">
                   Contact
                 </span>
               </Link>
               {/* Increase the margin before "Request Appointment" for larger separation */}
-              <div className="md:ml-12 lg:ml-16">
+              {/* <div className="md:ml-12 lg:ml-16">
                 <Link href="/appointment" passHref>
                   <span className="py-2 md:py-0 cursor-pointer hover:text-pink-500 ">
                     Request Appointment
                   </span>
                 </Link>
-              </div>
+              </div> */}
             </nav>
           </div>
         </div>
