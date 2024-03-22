@@ -10,12 +10,10 @@ import Resources from "../components/Resources";
 import Events from "../components/Events";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import PopupBar from "../components/PopupBar";
 
 function MyApp({}) {
   return (
     <>
-      <PopupBar />
       <Header />
       <VideoSection />
       <MeetTheOwnerSection />

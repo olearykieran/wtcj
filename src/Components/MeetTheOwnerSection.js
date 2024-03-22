@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import tiff from "../../public/tiff.jpg";
+import tiff from "../../public/t1.jpeg";
 
 export default function MeetTheOwnerSection() {
   return (
