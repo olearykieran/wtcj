@@ -5,8 +5,18 @@ export default function Events() {
       id: 1,
       title:
         "Catherine, Princess of Wales, revealed Friday she has been diagnosed with cancer and is in the early stages of treatment.",
-      date: "March 22, 2024",
-      time: "8 - 9 PM",
+      date: "March 23, 2024",
+      time: "4 PM",
+      description: "Interview on CNN",
+      link: "https://www.cnn.com/",
+    },
+
+    {
+      id: 2,
+      title:
+        "Catherine, Princess of Wales, revealed Friday she has been diagnosed with cancer and is in the early stages of treatment.",
+      date: "March 24, 2024",
+      time: "9 PM",
       description: "Interview on CNN",
       link: "https://www.cnn.com/",
     },

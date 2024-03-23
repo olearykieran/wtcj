@@ -33,16 +33,16 @@ export default function VideoSection() {
         >
           <div className={isMobile ? "flex-shrink-0" : "flex-shrink-0 mr-20"}>
             <img
-              src="/wpng.png"
+              src="/B-PNG.png"
               alt="Logo"
               style={{
-                width: isMobile ? "250px" : "450px",
-                height: isMobile ? "150px" : "300px",
+                width: isMobile ? "250px" : "400px",
+                height: isMobile ? "250px" : "400px",
               }}
             />
           </div>
           {isMobile && (
-            <div className="text-white text-center mt-4">
+            <div className="text-white mb-6 text-center mt-4">
               <p className="text-2xl py-2 font-light">Leading with Expertise</p>
               <p className="text-2xl py-2 font-light">Empowering with Knowledge</p>
               <p className="text-2xl py-2 font-light">Guiding with Compassion</p>

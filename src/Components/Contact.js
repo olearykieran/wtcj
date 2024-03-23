@@ -62,11 +62,13 @@ export default function Contact() {
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <ul>
               <li className="mb-2">
-                <strong>Email:</strong> ttrososandoval@gmail.com
+                <strong>Email:</strong> Drtiffanytroso@winningthecancerjourney.com
               </li>
+              {/*
               <li className="mb-2">
                 <strong>Phone:</strong> (917) 647-1718
               </li>
+              */}
               <li>
                 <strong>Address:</strong> Long Island, New York
               </li>
