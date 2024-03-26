@@ -61,7 +61,7 @@ export default function Events() {
               <p className="mt-4">{event.description}</p>
               <a
                 href={event.link}
-                className="mt-6 inline-block bg-purple-500 text-white rounded-lg px-6 py-3 hover:bg-one"
+                className="mt-6 inline-block bg-purple-500 text-white rounded-lg px-6 py-3 shadow-lg hover:bg-one"
               >
                 Learn More
               </a>

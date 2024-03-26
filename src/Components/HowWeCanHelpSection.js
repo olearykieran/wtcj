@@ -43,7 +43,7 @@ export default function HowWeCanHelpSection() {
             <div className="mt-8">
               <button
                 onClick={redirectToFacebookGroup}
-                className="bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-xl"
+                className="bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-lg"
               >
                 Join Our Facebook Group
               </button>

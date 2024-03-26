@@ -1496,3 +1496,30 @@ body {
 .custom-shape-divider-bottom-1711467659 .shape-fill {
   fill: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .video-section,
+  .custom-shape-divider-bottom-1711467659,
+  .meet-the-owner-section,
+  .section-with-curved-edge {
+    padding: 20 0px; /* Adds padding on smaller screens */
+  }
+}
+
+/* Adjust the sections to ensure content doesn't get cut off */
+.video-section {
+  /* Existing styles */
+  padding: 0 40px; /* Example: Add more padding */
+}
+
+/* For text elements specifically */
+.text-2xl,
+.text-3xl {
+  padding: 0 0px; /* Adjusts text padding if needed */
+}
+
+@media (max-width: 768px) {
+  .custom-shape-divider-bottom-1711467659 {
+    display: none; /* Adjust this value to push the divider down on mobile */
+  }
+}

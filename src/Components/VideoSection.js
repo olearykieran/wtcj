@@ -39,7 +39,7 @@ export default function VideoSection() {
               <p className="text-2xl py-2 font-light">Guiding with Compassion</p>
               <button
                 onClick={handleScheduleCall} // Updated to use handleScheduleCall
-                className="mt-8 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-6xl"
+                className="mt-8 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-lg"
               >
                 Schedule a Discovery Call
               </button>
@@ -52,7 +52,7 @@ export default function VideoSection() {
               <p className="text-3xl py-2 font-light">Guiding with Compassion</p>
               <button
                 onClick={handleScheduleCall} // Updated to use handleScheduleCall
-                className="mt-8 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-6xl"
+                className="mt-8 bg-blue-500 hover:bg-twlgtext-black py-2 px-4 rounded shadow-md"
               >
                 Schedule a Discovery Call
               </button>

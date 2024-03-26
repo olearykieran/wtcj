@@ -42,7 +42,7 @@ export default function MeetTheOwnerSection() {
           <div className="mt-8">
             <button
               onClick={redirectToFacebookGroup}
-              className="bg-pink hover:bg-two text-black py-2 px-4 rounded shadow-xl"
+              className="bg-pink hover:bg-two text-black py-2 px-4 rounded shadow-lg"
             >
               Join Our Facebook Group
             </button>
