@@ -1440,6 +1440,9 @@ body {
 }
 
 .video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60vh;
   background: linear-gradient(
     to right,
@@ -1470,7 +1473,7 @@ body {
   fill: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .video-section,
   .custom-shape-divider-bottom-1711467659,
   .meet-the-owner-section,
@@ -1479,7 +1482,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .custom-shape-divider-bottom-1711467659 {
     display: none; /* Adjust this value to push the divider down on mobile */
   }
@@ -1489,7 +1492,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 80vh;
   background: linear-gradient(to right, #ffffff, #ff85a2);
   position: relative;
 }
@@ -1500,11 +1503,17 @@ body {
 }
 
 /* Adjustments for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .video-section {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20px 0; /* Adds vertical padding */
+
+    padding: 40px 20px;
+  }
+
+  .video-section .content {
+    flex-direction: column;
   }
 
   .video-section img {
@@ -1512,10 +1521,12 @@ body {
     height: 250px;
     margin-bottom: 20px; /* Adds space below the logo */
     margin-top: 40px;
+    padding: 20px;
   }
 
   .video-section .text-black {
-    margin-bottom: 20px; /* Ensures there's space above the button */
+    margin-bottom: 20px;
+    margin-top: 20px; /* Ensures there's space above the button */
   }
 
   .custom-shape-divider-bottom-1711467659 {

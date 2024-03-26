@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react"; // Updated import
 import { useMediaQuery } from "react-responsive";
 
 export default function VideoSection() {
@@ -9,12 +9,28 @@ export default function VideoSection() {
     window.open("https://calendly.com/drtiffanytrososandoval", "_blank");
   };
 
-  // Detect if the device has a max-width of 768px, indicating a mobile device.
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  // Initialize isMobile as false
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Set isMobile based on the initial window width
+    setIsMobile(window.innerWidth < 1200);
+
+    // Function to update state based on viewport width
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1200);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <div className="video-section relative w-full">
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
+      <div className="content absolute inset-0 flex flex-col items-center justify-center">
         <div
           className={
             isMobile
@@ -23,14 +39,7 @@ export default function VideoSection() {
           }
         >
           <div className={isMobile ? "flex-shrink-0" : "flex-shrink-0 mr-20"}>
-            <img
-              src="/B-PNG.png"
-              alt="Logo"
-              style={{
-                width: isMobile ? "250px" : "400px",
-                height: isMobile ? "250px" : "400px",
-              }}
-            />
+            <img src="/B-PNG.png" alt="Logo" />
           </div>
           {isMobile && (
             <div className="text-black mb-6 text-center mt-4">
@@ -60,7 +69,7 @@ export default function VideoSection() {
           )}
         </div>
       </div>
-      <div class="custom-shape-divider-bottom-1711467659">
+      <div className="custom-shape-divider-bottom-1711467659">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +78,7 @@ export default function VideoSection() {
         >
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"
+            className="shape-fill"
           ></path>
         </svg>
       </div>
