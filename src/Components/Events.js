@@ -8,17 +8,15 @@ export default function Events() {
       date: "March 23, 2024",
       time: "4 PM",
       description: "Interview on CNN",
-      link: "https://www.cnn.com/",
+      link: "https://app.frame.io/reviews/174fd8d9-582c-4e0d-8e61-ef5e41697647/57492cd1-c9f3-42c4-a67c-4cc4b646ef42",
     },
 
     {
       id: 2,
-      title:
-        "Catherine, Princess of Wales, revealed Friday she has been diagnosed with cancer and is in the early stages of treatment.",
-      date: "March 24, 2024",
-      time: "9 PM",
-      description: "Interview on CNN",
-      link: "https://www.cnn.com/",
+      title: "Empowering Women in the Face of Cancer: Navigating the Path Forward",
+      date: "May 13-18, 2024",
+      description: "Upcoming Conference",
+      link: "https://somedocs.teachable.com/p/empowering-women-in-the-face-of-cancer?affcode=335065_brjymo9b",
     },
 
     /* 

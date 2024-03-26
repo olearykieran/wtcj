@@ -4,26 +4,17 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function VideoSection() {
-  const handleScrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+  // This function now opens the Calendly link in a new tab.
+  const handleScheduleCall = () => {
+    window.open("https://calendly.com/drtiffanytrososandoval", "_blank");
   };
 
+  // Detect if the device has a max-width of 768px, indicating a mobile device.
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
-    <div
-      className="relative w-full"
-      style={{ height: "60vh", borderBottom: "3px solid rgb(0, 242, 223, .08)" }}
-    >
-      <img
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/sunset5.jpeg"
-        alt="Hero Image"
-      />
+    <div className="video-section relative w-full">
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        {/* Logo and text content: responsive layout */}
         <div
           className={
             isMobile
@@ -42,32 +33,45 @@ export default function VideoSection() {
             />
           </div>
           {isMobile && (
-            <div className="text-white mb-6 text-center mt-4">
+            <div className="text-black mb-6 text-center mt-4">
               <p className="text-2xl py-2 font-light">Leading with Expertise</p>
               <p className="text-2xl py-2 font-light">Empowering with Knowledge</p>
               <p className="text-2xl py-2 font-light">Guiding with Compassion</p>
               <button
-                onClick={handleScrollToContact}
-                className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-6xl"
+                onClick={handleScheduleCall} // Updated to use handleScheduleCall
+                className="mt-8 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-6xl"
               >
                 Schedule a Discovery Call
               </button>
             </div>
           )}
           {!isMobile && (
-            <div className="text-white text-center ml-4">
+            <div className="text-black mb-6 text-center mt-4">
               <p className="text-3xl py-2 font-light">Leading with Expertise</p>
               <p className="text-3xl py-2 font-light">Empowering with Knowledge</p>
               <p className="text-3xl py-2 font-light">Guiding with Compassion</p>
               <button
-                onClick={handleScrollToContact}
-                className="mt-8 bg-pink-500 hover:bg-two text-white py-2 px-4 rounded shadow-6xl"
+                onClick={handleScheduleCall} // Updated to use handleScheduleCall
+                className="mt-8 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-6xl"
               >
                 Schedule a Discovery Call
               </button>
             </div>
           )}
         </div>
+      </div>
+      <div class="custom-shape-divider-bottom-1711467659">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
       </div>
     </div>
   );

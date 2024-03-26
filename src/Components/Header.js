@@ -32,16 +32,19 @@ export default function Header() {
 
   return (
     <header
-      className="w-full z-30 px-5 py-3 lg:px-8"
+      className="w-full z-30 px-2 py-3 lg:px-4" // Reduced padding
       style={{
         backgroundColor: `rgba(255, 255, 255, ${opacity * 0.8})`,
         borderBottom: "3px solid rgba(225, 0, 172, 0.08)",
         transition: "opacity 0.5s ease-in-out",
       }}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div
+        className="container mx-auto flex justify-between items-center"
+        style={{ maxWidth: "98%" }}
+      >
         <Link href="/">
-          <span className="text-xl lg:text-2xl font-light text-gray-900 hover:text-purple-500 cursor-pointer">
+          <span className="text-xl lg:text-2xl font-light text-black hover:text-pink-500 cursor-pointer">
             Winning the Cancer Journey
           </span>
         </Link>
@@ -67,7 +70,7 @@ export default function Header() {
             <Link href="/" passHref>
               <span
                 onClick={() => setIsMenuOpen(false)}
-                className="py-2 md:py-0 cursor-pointer hover:text-pink-500"
+                className="py-2 md:py-0 cursor-pointer text-black hover:text-pink-500"
               >
                 Home
               </span>
@@ -75,7 +78,7 @@ export default function Header() {
             <Link href="#meettheowner" passHref>
               <span
                 onClick={() => setIsMenuOpen(false)}
-                className="py-2 md:py-0 cursor-pointer hover:text-pink-500"
+                className="py-2 md:py-0 cursor-pointer text-black hover:text-pink-500"
               >
                 About
               </span>
@@ -83,7 +86,7 @@ export default function Header() {
             <Link href="#contact" passHref>
               <span
                 onClick={() => setIsMenuOpen(false)}
-                className="py-2 md:py-0 cursor-pointer hover:text-pink-500"
+                className="py-2 md:py-0 cursor-pointer text-black  hover:text-pink-500"
               >
                 Contact
               </span>

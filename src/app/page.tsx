@@ -20,7 +20,7 @@ function MyApp({}) {
       <HowWeCanHelpSection />
       <FeaturedSection />
       <PatientStories />
-      <Resources />
+
       <Events />
       <Contact />
       <Footer />

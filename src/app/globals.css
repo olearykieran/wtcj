@@ -680,6 +680,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -939,6 +943,11 @@ video {
   background-color: rgb(227 156 191 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 228 217 / var(--tw-bg-opacity));
+}
+
 .bg-purple-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(168 85 247 / var(--tw-bg-opacity));
@@ -1163,6 +1172,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-pink {
+  --tw-text-opacity: 1;
+  color: rgb(161 42 107 / var(--tw-text-opacity));
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
@@ -1224,6 +1238,11 @@ body {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
+.bg-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 158 180 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-one:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(234 220 247 / var(--tw-bg-opacity));
@@ -1244,6 +1263,10 @@ body {
   color: rgb(236 72 153 / var(--tw-text-opacity));
 }
 
+.text-pink-500 {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
 .hover\:text-purple-500:hover {
   --tw-text-opacity: 1;
   color: rgb(168 85 247 / var(--tw-text-opacity));
@@ -1432,4 +1455,44 @@ body {
 .section-with-curved-edge {
   position: relative;
   overflow: hidden; /* This ensures the pseudo-element does not extend outside the section */
+}
+
+.video-section {
+  height: 60vh;
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ff85a2
+  ); /* Adjust the colors as needed */
+  position: relative;
+}
+
+.video-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Adjust the height as needed */
+}
+
+.custom-shape-divider-bottom-1711467659 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1711467659 svg {
+  position: relative;
+  display: block;
+  width: calc(137% + 1.3px);
+  height: 200px;
+}
+
+.custom-shape-divider-bottom-1711467659 .shape-fill {
+  fill: #ffffff;
 }

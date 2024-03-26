@@ -4,24 +4,31 @@ export default function FeaturedArticles() {
   const articles = [
     {
       id: 1,
-      title: "Navigating Your Treatment Options",
-      summary: "Coming Soon...",
+      title: "Book A Discovery Call",
+      summary: "Click here to schedule a personalized one on one call",
       imageUrl: "/doctor.jpeg",
-      link: "/blog/treatment-options",
+      link: "https://calendly.com/drtiffanytrososandoval",
     },
     {
       id: 2,
-      title: "Understanding Emotional Support Resources",
+      title: "Cancer Coaching and Concierge Services",
       summary: "Coming Soon...",
       imageUrl: "/emo.jpeg",
-      link: "/blog/emotional-support",
+      link: "/",
     },
     {
       id: 3,
-      title: "Empowerment Through Knowledge",
-      summary: "Coming Soon...",
-      imageUrl: "/team.jpeg",
-      link: "/blog/empowerment-knowledge",
+      title: "Media Showcase",
+      summary: "Our latest media updates",
+      imageUrl: "/media.jpeg",
+      link: "https://app.frame.io/reviews/174fd8d9-582c-4e0d-8e61-ef5e41697647/57492cd1-c9f3-42c4-a67c-4cc4b646ef42",
+    },
+    {
+      id: 4,
+      title: "Events",
+      summary: "Upcoming Events and Conferences",
+      imageUrl: "/forest.jpeg",
+      link: "https://somedocs.teachable.com/p/empowering-women-in-the-face-of-cancer?affcode=335065_brjymo9b",
     },
   ];
 
@@ -33,8 +40,8 @@ export default function FeaturedArticles() {
       }}
     >
       <div className="max-w-6xl mb-24 mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-light text-center">Featured Articles</h2>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-light text-center">Featured</h2>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {articles.map((article) => (
             <div
               key={article.id}
