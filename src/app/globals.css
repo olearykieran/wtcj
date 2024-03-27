@@ -1497,6 +1497,15 @@ body {
   position: relative;
 }
 
+.video-section-2 {
+  display: flex;
+  justify-content: start;
+  align-items: left;
+  height: 30vh;
+  background: linear-gradient(to right, #ffffff, #ff85a2);
+  position: relative;
+}
+
 .video-section img {
   width: 400px;
   height: 400px;

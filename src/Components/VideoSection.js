@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react"; // Updated import
-import { useMediaQuery } from "react-responsive";
 
 export default function VideoSection() {
   // This function now opens the Calendly link in a new tab.

@@ -2,7 +2,7 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import VideoSection from "@/components/VideoSection";
+import MinimalLogoSection from "@/components/MinimalLogoSection";
 import Contact from "@/components/Contact";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ export default function Media() {
   return (
     <>
       <Header />
-      <VideoSection />
+      <MinimalLogoSection />
       <main className="min-h-screen flex  flex-col items-center justify-center p-4 max-w-7xl mx-auto px-5 py-3 lg:px-8 mt-10 mb-10 flex-wrap md:flex-nowrap">
         <h1 className="text-3xl py-12 text-gray-800 mb-4">Media Showcase</h1>
 
