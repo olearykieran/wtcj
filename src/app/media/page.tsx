@@ -1,23 +1,44 @@
+"use client";
+
 // pages/media.js
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MinimalLogoSection from "@/components/MinimalLogoSection";
 import Contact from "@/components/Contact";
 import Link from "next/link";
+// Import getDownloadURL and ref from firebase/storage
+import { getDownloadURL, ref } from "firebase/storage";
+// Import the storage object you exported from your Firebase setup
+import { storage } from "../../../firebase";
 
 export default function Media() {
+  const [videoUrl, setVideoUrl] = useState("");
+
+  useEffect(() => {
+    // Create a reference to the podcast video in Firebase Storage
+    const videoRef = ref(storage, "/podcast.mp4");
+
+    // Fetch the URL and update state
+    getDownloadURL(videoRef)
+      .then((url) => {
+        setVideoUrl(url);
+      })
+      .catch((error) => {
+        console.error("Error fetching video URL:", error);
+      });
+  }, []);
   return (
     <>
       <Header />
       <MinimalLogoSection />
-      <main className="min-h-screen flex  flex-col items-center justify-center p-4 max-w-7xl mx-auto px-5 py-3 lg:px-8 mt-10 mb-10 flex-wrap md:flex-nowrap">
-        <h1 className="text-3xl py-12 text-gray-800 mb-4">Media Showcase</h1>
-
-        {/* Podcast video */}
+      <main className="min-h-screen flex flex-col items-center justify-center p-4 max-w-7xl mx-auto px-5 py-3 lg:px-8 mt-10 mb-10 flex-wrap md:flex-nowrap">
+        {/* Rest of your component */}
+        {/* Update the video src to use videoUrl state */}
         <div className="w-full max-w-4xl mb-8">
           <h2 className="text-2xl mt-10 text-center mb-4">Podcast Episode:</h2>
-          <video src="/podcast.mp4" controls className="w-full h-auto">
+          <video src={videoUrl} controls className="w-full h-auto">
             Your browser does not support the video tag.
           </video>
         </div>
