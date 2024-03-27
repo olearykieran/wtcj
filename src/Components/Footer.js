@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-800 text-white">
-      <div className="max-w-6xl mx-auto  py-6 lg:px-8">
+      <div className="max-w-6xl mx-auto py-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between">
           <div className="flex gap-4 justify-center px-16">
             <a href="/" onClick={() => handleScroll("home")} className="hover:underline">
@@ -25,19 +25,19 @@ export default function Footer() {
             >
               About Us
             </a>
-            {/* <a href="/services" className="hover:underline">
-              Services
-            </a>{" "}
-            */}
-            {/* <a href="/blog" className="hover:underline">
-              Blog
-            </a> */}
             <a
               href="#contact"
               onClick={() => handleScroll("contact")}
               className="hover:underline"
             >
               Contact
+            </a>
+            {/* Media Page Link */}
+            <a
+              href="/media" // This directly navigates to the media page
+              className="hover:underline"
+            >
+              Media
             </a>
           </div>
           <div className="mb-4 lg:mb-0 text-sm text-center flex-grow">

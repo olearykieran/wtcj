@@ -16,12 +16,13 @@ export default function FeaturedArticles() {
       imageUrl: "/emo.jpeg",
       link: "/",
     },
+
     {
       id: 3,
       title: "Media Showcase",
       summary: "Our latest media updates",
       imageUrl: "/media.jpeg",
-      link: "https://app.frame.io/reviews/174fd8d9-582c-4e0d-8e61-ef5e41697647/57492cd1-c9f3-42c4-a67c-4cc4b646ef42",
+      link: "/media", // Update this to point to the new page
     },
     {
       id: 4,

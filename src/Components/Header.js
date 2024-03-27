@@ -45,7 +45,7 @@ export default function Header() {
       >
         <Link href="/">
           <span className="text-xl lg:text-2xl font-light text-black hover:text-pink-500 cursor-pointer">
-            Winning the Cancer Journey
+            Winning The Cancer Journey
           </span>
         </Link>
 
@@ -89,6 +89,15 @@ export default function Header() {
                 className="py-2 md:py-0 cursor-pointer text-black  hover:text-pink-500"
               >
                 Contact
+              </span>
+            </Link>
+            {/* Media Button */}
+            <Link href="/media" passHref>
+              <span
+                onClick={() => setIsMenuOpen(false)}
+                className="py-2 md:py-0 cursor-pointer text-black hover:text-pink-500"
+              >
+                Media
               </span>
             </Link>
           </nav>
