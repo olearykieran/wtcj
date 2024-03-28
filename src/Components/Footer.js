@@ -13,15 +13,15 @@ export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-6xl mx-auto py-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between">
-          <div className="flex gap-4 justify-center px-16">
+        <div className="flex flex-wrap items-center text-center justify-between">
+          <div className="flex gap-4 justify-center text-center px-16">
             <a href="/" onClick={() => handleScroll("home")} className="hover:underline">
               Home
             </a>
             <a
               href="#meettheowner"
               onClick={() => handleScroll("meettheowner")}
-              className="hover:underline"
+              className="hover:underline "
             >
               About Us
             </a>

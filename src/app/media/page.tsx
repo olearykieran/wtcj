@@ -58,7 +58,7 @@ export default function Media() {
             </p>
             <Link
               href="https://app.frame.io/reviews/174fd8d9-582c-4e0d-8e61-ef5e41697647/57492cd1-c9f3-42c4-a67c-4cc4b646ef42"
-              className="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+              className="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-two transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >

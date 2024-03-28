@@ -13,17 +13,17 @@ export default function MinimalLogoSection() {
   }, []);
 
   return (
-    <div className="video-section-2 relative w-full">
+    <div className="video-section-2 mb-10 relative w-full">
       <div
-        className={`absolute inset-0 flex mt-10 ${
+        className={`absolute inset-0 flex mt-10 mb-10 py-10 ${
           isMobile ? "justify-center" : "justify-start"
         } items-left h-full`}
       >
         <div
-          className="ml-4"
           style={{
-            width: isMobile ? "200px" : "200px",
-            height: isMobile ? "200px" : "200px",
+            width: isMobile ? "175px" : "200px",
+            height: isMobile ? "175px" : "200px",
+            marginLeft: isMobile ? "0px" : "80px",
           }}
         >
           <img src="/B-PNG.png" alt="Logo" className="w-full h-auto" />

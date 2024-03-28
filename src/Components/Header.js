@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import menuIcon from "../../public/new-menu.png";
+import menuIcon from "../../public/menuu.png";
 
 // Header component definition
 export default function Header() {
@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <header
-      className="w-full z-30 px-2 py-3 lg:px-4" // Reduced padding
+      className="w-full z-30 px-8 md:px-2 py-3 lg:px-4" // Reduced padding
       style={{
         backgroundColor: `rgba(255, 255, 255, ${opacity * 0.8})`,
         borderBottom: "3px solid rgba(225, 0, 172, 0.08)",
