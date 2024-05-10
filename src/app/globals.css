@@ -1492,7 +1492,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 65vh;
   background: linear-gradient(to right, #ffffff, #ff85a2);
   position: relative;
 }
@@ -1517,7 +1517,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
+    height: 80vh;
     padding: 40px 20px;
   }
 

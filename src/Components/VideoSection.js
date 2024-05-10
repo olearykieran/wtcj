@@ -58,12 +58,12 @@ export default function VideoSection() {
               <p className="text-3xl py-2 font-light">Leading with Expertise</p>
               <p className="text-3xl py-2 font-light">Empowering with Knowledge</p>
               <p className="text-3xl py-2 font-light">Guiding with Compassion</p>
-              <button
-                onClick={handleScheduleCall} // Updated to use handleScheduleCall
-                className="mt-8 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-md"
+              <a
+                href="#contact"
+                className="mt-12 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-md block mx-auto w-12"
               >
-                Schedule a Discovery Call
-              </button>
+                Connect With Us
+              </a>
             </div>
           )}
         </div>
