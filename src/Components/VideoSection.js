@@ -1,13 +1,7 @@
 "use client";
-
-import React, { useEffect, useState } from "react"; // Updated import
+import React, { useEffect, useState } from "react";
 
 export default function VideoSection() {
-  // This function now opens the Calendly link in a new tab.
-  const handleScheduleCall = () => {
-    window.open("https://calendly.com/drtiffanytrososandoval", "_blank");
-  };
-
   // Initialize isMobile as false
   const [isMobile, setIsMobile] = useState(false);
 
@@ -27,6 +21,13 @@ export default function VideoSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty dependency array ensures this runs once on mount
 
+  const handleConnectClick = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="video-section relative w-full">
       <div className="content absolute inset-0 flex flex-col items-center justify-center">
@@ -40,32 +41,25 @@ export default function VideoSection() {
           <div className={isMobile ? "flex-shrink-0" : "flex-shrink-0 mr-20"}>
             <img src="/B-PNG.png" alt="Logo" />
           </div>
-          {isMobile && (
-            <div className="text-black mb-6 text-center mt-4">
-              <p className="text-2xl py-2 font-light">Leading with Expertise</p>
-              <p className="text-2xl py-2 font-light">Empowering with Knowledge</p>
-              <p className="text-2xl py-2 font-light">Guiding with Compassion</p>
+          <div className="text-black mb-6 text-center mt-4">
+            <p className={`${isMobile ? "text-2xl" : "text-3xl"} py-2 font-light`}>
+              Leading with Expertise
+            </p>
+            <p className={`${isMobile ? "text-2xl" : "text-3xl"} py-2 font-light`}>
+              Empowering with Knowledge
+            </p>
+            <p className={`${isMobile ? "text-2xl" : "text-3xl"} py-2 font-light`}>
+              Guiding with Compassion
+            </p>
+            <div className="relative z-10 mt-6">
               <button
-                onClick={handleScheduleCall} // Updated to use handleScheduleCall
-                className="mt-8 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-lg"
-              >
-                Schedule a Discovery Call
-              </button>
-            </div>
-          )}
-          {!isMobile && (
-            <div className="text-black mb-6 text-center mt-4">
-              <p className="text-3xl py-2 font-light">Leading with Expertise</p>
-              <p className="text-3xl py-2 font-light">Empowering with Knowledge</p>
-              <p className="text-3xl py-2 font-light">Guiding with Compassion</p>
-              <a
-                href="#contact"
-                className="mt-12 bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-md block mx-auto w-12"
+                onClick={handleConnectClick}
+                className="bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-md"
               >
                 Connect With Us
-              </a>
+              </button>
             </div>
-          )}
+          </div>
         </div>
       </div>
       <div className="custom-shape-divider-bottom-1711467659">
