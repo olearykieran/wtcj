@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "winning-the-cancer-journey"
-  }
+    "default": "winning-the-cancer-journey",
+    "staging": "winning-the-cancer-journey"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
