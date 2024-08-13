@@ -1,7 +1,13 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 
 export default function VideoSection() {
+  // This function opens the Calendly link in a new tab.
+  const handleScheduleCall = () => {
+    window.open("https://calendly.com/drtiffanytrososandoval", "_blank");
+  };
+
   // Initialize isMobile as false
   const [isMobile, setIsMobile] = useState(false);
 
@@ -20,13 +26,6 @@ export default function VideoSection() {
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty dependency array ensures this runs once on mount
-
-  const handleConnectClick = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="video-section relative w-full">
@@ -53,10 +52,10 @@ export default function VideoSection() {
             </p>
             <div className="relative z-10 mt-6">
               <button
-                onClick={handleConnectClick}
+                onClick={handleScheduleCall}
                 className="bg-blue-500 hover:bg-two text-black py-2 px-4 rounded shadow-md"
               >
-                Connect With Us
+                Schedule a Discovery Call
               </button>
             </div>
           </div>
