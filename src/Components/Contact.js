@@ -30,9 +30,29 @@ export default function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Trim input values to remove any leading/trailing whitespace
+    const trimmedData = {
+      name: formData.name.trim(),
+      phoneNumber: formData.phoneNumber.trim(),
+      email: formData.email.trim(),
+      message: formData.message.trim(),
+    };
+
+    // Validation check
+    if (
+      !trimmedData.name ||
+      !trimmedData.phoneNumber ||
+      !trimmedData.email ||
+      !trimmedData.message
+    ) {
+      alert("Please fill out all fields before submitting.");
+      return; // Prevent form submission if any field is empty
+    }
+
     try {
       await addDoc(collection(db, "contacts"), {
-        ...formData,
+        ...trimmedData,
         timestamp: Timestamp.now(), // This adds the current timestamp
       });
       console.log("Document written");
@@ -97,6 +117,7 @@ export default function Contact() {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -114,6 +135,7 @@ export default function Contact() {
                   placeholder="Your Phone Number"
                   value={formData.phoneNumber}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -131,6 +153,7 @@ export default function Contact() {
                   placeholder="you@example.com"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="mb-6">
@@ -148,6 +171,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
+                  required
                 ></textarea>
               </div>
               <div className="flex items-center justify-between">

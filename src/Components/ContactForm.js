@@ -12,17 +12,52 @@ const ContactForm = ({ onSuccessfulSubmit }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(`Updating ${name}: ${value.trim()}`); // Log the name and value of the field being updated
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value.trim(), // Trim the value before updating the state
     }));
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Trim input values to remove any leading/trailing whitespace
+    const trimmedData = {
+      name: formData.name.trim(),
+      phoneNumber: formData.phoneNumber.trim(),
+      email: formData.email.trim(),
+      message: formData.message.trim(),
+    };
+
+    // Validation check
+    console.log("Checking validation...");
+    if (!trimmedData.name) {
+      console.log("Name is empty");
+    }
+    if (!trimmedData.phoneNumber) {
+      console.log("Phone number is empty");
+    }
+    if (!trimmedData.email) {
+      console.log("Email is empty");
+    }
+    if (!trimmedData.message) {
+      console.log("Message is empty");
+    }
+
+    if (
+      !trimmedData.name ||
+      !trimmedData.phoneNumber ||
+      !trimmedData.email ||
+      !trimmedData.message
+    ) {
+      alert("Please fill out all fields before submitting.");
+      return; // Prevent form submission if any field is empty
+    }
+
     try {
       await addDoc(collection(db, "contacts"), {
-        ...formData,
+        ...trimmedData,
         timestamp: Timestamp.now(),
       });
       console.log("Document written");
@@ -57,6 +92,7 @@ const ContactForm = ({ onSuccessfulSubmit }) => {
           value={formData.name}
           onChange={handleChange}
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          required
         />
       </div>
       <div className="mb-4">
@@ -74,6 +110,7 @@ const ContactForm = ({ onSuccessfulSubmit }) => {
           placeholder="Your Phone Number"
           value={formData.phoneNumber}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="mb-4">
@@ -88,6 +125,7 @@ const ContactForm = ({ onSuccessfulSubmit }) => {
           placeholder="you@example.com"
           value={formData.email}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="mb-6">
@@ -102,6 +140,7 @@ const ContactForm = ({ onSuccessfulSubmit }) => {
           value={formData.message}
           onChange={handleChange}
           rows="4"
+          required
         ></textarea>
       </div>
       <div className="flex items-center justify-between">
